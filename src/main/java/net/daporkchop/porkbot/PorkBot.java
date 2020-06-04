@@ -46,6 +46,7 @@ import net.daporkchop.porkbot.command.bot.CommandPing;
 import net.daporkchop.porkbot.command.bot.CommandSay;
 import net.daporkchop.porkbot.command.bot.CommandTest;
 import net.daporkchop.porkbot.command.mangement.CommandMuteAll;
+import net.daporkchop.porkbot.command.mangement.CommandNuke;
 import net.daporkchop.porkbot.command.minecraft.CommandMcUUID;
 import net.daporkchop.porkbot.command.minecraft.CommandOfflineUUID;
 import net.daporkchop.porkbot.command.minecraft.JavaPEQuery;
@@ -122,6 +123,7 @@ public class PorkBot {
         //management
         CommandRegistry.registerCommand(new CommandMuteAll("muteall", "Muted", true));
         CommandRegistry.registerCommand(new CommandMuteAll("unmuteall", "Un-muted", false));
+        
 
         //audio
         CommandRegistry.registerCommand(new CommandOrdered());
@@ -133,9 +135,10 @@ public class PorkBot {
         CommandRegistry.registerCommand(new CommandShuffle());
         CommandRegistry.registerCommand(new CommandSkip());
         CommandRegistry.registerCommand(new CommandStop());
-        //CommandRegistry.registerCommand(new CommandPlayAll());
-        //CommandRegistry.registerCommand(new CommandQueue());
-        //CommandRegistry.registerCommand(new CommandStop());
+        CommandRegistry.registerCommand(new CommandNuke());
+        CommandRegistry.registerCommand(new CommandPlayAll());
+        CommandRegistry.registerCommand(new CommandQueue());
+        CommandRegistry.registerCommand(new CommandStop());
 
         //load state
         Config.load();
